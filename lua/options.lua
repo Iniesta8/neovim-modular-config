@@ -2,14 +2,17 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
+-- Enable cursor line
+vim.o.cursorline = true
+
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
 
--- Enable mouse mode
-vim.o.mouse = 'a'
+-- Show relative line numbers
+vim.wo.relativenumber = true
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -38,5 +41,11 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Don't show mode, as its already shown by lualine
+vim.o.showmode = false
+
+-- Keep some scrreen lines above and below the cursor
+vim.o.scrolloff = 8
 
 -- vim: ts=2 sts=2 sw=2 et
