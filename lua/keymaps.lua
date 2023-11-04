@@ -11,10 +11,10 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Helpers
 vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>W', ':w!<CR>', { noremap = true })
-vim.keymap.set('n', '<leader>q', ':q<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>q', ':q!<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>Q', ':bd<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>,', '<C-^>', { noremap = true })
-vim.keymap.set('n', '<leader>fc', '/\\v^[<\\|=>]{7}( .*\\|$)<CR>', { noremap = true }) -- find merge conflict markers
+-- vim.keymap.set('n', '<leader>fc', '/\\v^[<\\|=>]{7}( .*\\|$)<CR>', { noremap = true }) -- find merge conflict markers
 vim.keymap.set('n', 'vs', ':vs<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'sp', ':sp<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-L>', '<C-W><C-L>', { noremap = true })
@@ -48,6 +48,9 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Some old functions and configurations that I used in the past
+
+vim.keymap.set('n', 'Q', '<nop>')
+
 vim.cmd([[
   " Strip trailing whitespace (,ss)
   function! StripWhitespace ()

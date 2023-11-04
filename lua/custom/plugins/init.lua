@@ -2,4 +2,22 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    opts = {},
+  },
+
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
+
+  {
+    'ellisonleao/gruvbox.nvim',
+    priority = 1000,
+    config = true,
+    opts = {},
+  },
+}
