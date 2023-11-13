@@ -97,7 +97,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'tokyonight',
+        theme = 'kanagawa',
         -- component_separators = '|',
         -- section_separators = '',
       },
@@ -110,7 +110,14 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = {
+        char = {'│'},
+      },
+      scope = {
+        enabled = false,
+      },
+    },
   },
 
   -- "gc" to comment visual regions/lines

@@ -6,7 +6,13 @@ return {
   {
     'folke/tokyonight.nvim',
     lazy = false,
-    opts = {},
+    opts = {
+      style = "moon",
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = false },
+      },
+    },
   },
 
   {
@@ -16,7 +22,6 @@ return {
 
   {
     'ellisonleao/gruvbox.nvim',
-    priority = 1000,
     config = true,
     opts = {},
   },
@@ -32,7 +37,14 @@ return {
       { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
       { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      -- { "<c-S>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+      { "<c-S>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
-  }
+  },
+
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    opts = {
+    },
+  },
 }
