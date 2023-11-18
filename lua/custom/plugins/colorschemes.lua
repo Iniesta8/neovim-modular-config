@@ -20,13 +20,21 @@ return {
   {
     'rebelot/kanagawa.nvim',
     lazy = false,
-    opts = {
-    },
+    opts = {},
+    config = function()
+      vim.cmd.colorscheme 'kanagawa'
+    end
   },
 
   {
     'Mofiqul/vscode.nvim',
-    opts = {
-    },
+    opts = {},
+  },
+
+  {
+    'projekt0n/github-nvim-theme',
+    lazy = false,
   }
 }
+
+-- vim: ts=2 sts=2 sw=2 et
