@@ -4,25 +4,7 @@
 -- See the kickstart.nvim README for more information
 return {
   {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    opts = {
-      style = "moon",
-      styles = {
-        comments = { italic = true },
-        keywords = { italic = false },
-      },
-    },
-  },
-
-  {
     'stevearc/dressing.nvim',
-    opts = {},
-  },
-
-  {
-    'ellisonleao/gruvbox.nvim',
-    config = true,
     opts = {},
   },
 
@@ -38,13 +20,6 @@ return {
       { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
       { "<c-S>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-    },
-  },
-
-  {
-    'rebelot/kanagawa.nvim',
-    lazy = false,
-    opts = {
     },
   },
 }
