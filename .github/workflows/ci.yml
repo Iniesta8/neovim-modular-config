@@ -13,7 +13,8 @@ jobs:
 
       - name: Install neovim
         run: sudo apt install neovim
+
       - name: Download plugins
         run: |
           mkdir ~/.config/nvim && mv $GITHUB_WORKSPACE ~/.config/nvim && cd ~/.config/nvim
-          nvim --headless "+Lazy! sync" +qa
+          nvim --headless -c "lua require('lazy').sync({wait = true})" +qa
