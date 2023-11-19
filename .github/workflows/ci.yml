@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install neovim
+        run: sudo apt install neovim
       - name: Download plugins
         run: |
           mkdir ~/.config/nvim && mv $GITHUB_WORKSPACE ~/.config/nvim && cd ~/.config/nvim
