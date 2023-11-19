@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: fedora-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download plugins
+        run: |
+          mkdir ~/.config/nvim && mv $GITHUB_WORKSPACE ~/.config/nvim && cd ~/.config/nvim
+          nvim --headless "+Lazy! sync" +qa
