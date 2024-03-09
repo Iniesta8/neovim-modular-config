@@ -26,7 +26,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -51,6 +51,7 @@ require('lazy').setup({
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} },
+
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -104,28 +105,13 @@ require('lazy').setup({
     },
   },
 
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
-    main = 'ibl',
-    opts = {
-      indent = {
-        char = { '│' },
-      },
-      scope = {
-        enabled = false,
-      },
-    },
-  },
-
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
+    event = 'VimEnter',
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -166,6 +152,7 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
+
 }, {})
 
 -- vim: ts=2 sts=2 sw=2 et
